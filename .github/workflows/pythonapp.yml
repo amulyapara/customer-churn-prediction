@@ -37,3 +37,6 @@ jobs:
     - name: Test Environment
       run: |
         python -c "import pandas; print('Pandas version:', pandas.__version__)"
+
+    - name: Run Model
+      run: python your_script_name.py

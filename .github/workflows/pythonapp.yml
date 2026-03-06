@@ -38,5 +38,8 @@ jobs:
       run: |
         python -c "import pandas; print('Pandas version:', pandas.__version__)"
 
-    - name: Run Model
-      run: python your_script_name.py
+    - name: Install Notebook Runner
+      run: pip install nbconvert ipykernel
+
+    - name: Run Notebook
+      run: jupyter nbconvert --to notebook --execute notebookschurn_prediction.ipynb
